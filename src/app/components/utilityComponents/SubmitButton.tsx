@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 type Colors =
   | "--white"
   | "--black"
@@ -13,9 +11,10 @@ type Colors =
 type Props = {
   text: string;
   color: Colors;
+  pending?: boolean;
 };
 
-const SubmitButton = ({ text, color = "--black" }: Props) => {
+const SubmitButton = ({ text, color = "--black", pending }: Props) => {
   const colorMap: Record<Colors, Colors> = {
     "--black": "--white",
     "--white": "--black",
@@ -38,13 +37,14 @@ const SubmitButton = ({ text, color = "--black" }: Props) => {
           "--btn-anti": `var(${antiColor})`,
         } as React.CSSProperties
       }
-      className="
+      className={`
       w-[170] font-bold text-center rounded-[5] px-4 
       border-2 h-[40] border-(--btn-color) text-[16px]
       text-(--btn-anti) bg-(--btn-color) transition-all duration-200 
-      hover:bg-(--btn-anti) hover:text-(--btn-color) cursor-pointer"
+      hover:bg-(--btn-anti) hover:text-(--btn-color) cursor-pointer
+      ${pending ? "opacity-50 cursor-not-allowed" : ""}`}
     >
-      {text}
+      {pending ? "Sending..." : text}
     </button>
   );
 };
