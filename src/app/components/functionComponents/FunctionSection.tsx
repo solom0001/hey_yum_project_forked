@@ -9,9 +9,9 @@ const FunctionSection = () => {
   const ref = useScrollReveal();
 
   return (
-    <div className="flex flex-col gap-[4.5rem] w-full S_content_width">
-      <div className="flex flex-col md:grid md:grid-cols-[2fr_1fr] gap-10 items-center p-4">
-        <div className="flex flex-col">
+    <div className="flex flex-col gap-18">
+      <div className="grid grid-cols-[2fr_1fr] gap-10 items-center">
+        <div className="flex flex-col items-center">
           <span className="w-fit flex flex-col gap-7.5">
             {/* <h1>TASTY BY NATURE</h1> */}
             <HeaderOneComp text="TASTY BY NATURE" />

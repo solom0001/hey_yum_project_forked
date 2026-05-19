@@ -1,8 +1,26 @@
+"use client";
+
+import { useFormStatus } from "react-dom";
+import { submitMail, type FormState } from "@/app/action/action";
 import InputField from "./FormComponents/InputField";
 import SocialLinks from "./SocialLinks";
 import SubmitButton from "./SubmitButton";
+import Success from "./FormComponents/Success";
+import Error from "./FormComponents/Error";
+import { useActionState } from "react";
+
+const initialState: FormState = {
+  success: false,
+  data: undefined,
+  error: {},
+};
 
 const Footer = () => {
+  const SubmitBtn = () => {
+    const { pending } = useFormStatus();
+    return <SubmitButton text="Submit" color="--white" pending={pending} />;
+  };
+  const [state, formAction] = useActionState(submitMail, initialState);
   return (
     <div className="fullbleed bg-(--black) h-[750] md:h-[550] flex flex-col gap-[50] px-[1rem] py-[2rem] md:grid md:grid-cols-[1fr_2fr]">
       <div className="flex flex-col gap-[20] md:order-2">
@@ -12,14 +30,29 @@ const Footer = () => {
         >
           Get our latest news
         </p>
-        <div className="flex flex-col gap-4 md:flex-row">
-          <div className="w-[345] mx-auto md:mx-0 grid">
-            <InputField color="--white" placeholder="Email" />
+        <form action={formAction} className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:flex-row">
+            <div className="w-[345] flex flex-col gap-2 mx-auto md:mx-0">
+              <InputField
+                dataInput="subscriptionMail"
+                color="--white"
+                placeholder="Email"
+                defaultValue={state?.data?.subscriptionMail ?? ""}
+              />
+            </div>
+
+            <div className="mx-auto md:mx-0">
+              <SubmitBtn />
+            </div>
           </div>
-          <div className="mx-auto md:mx-0 md:mr-auto">
-            <SubmitButton text="Subscribe" color="--white" />
+          <div className="mx-auto md:mx-0 grid">
+            <Error<FormState> state={state} stateType="subscriptionMail" />
+            <Success<FormState>
+              state={state}
+              text="Your mail has been added!"
+            />
           </div>
-        </div>
+        </form>
       </div>
       <div className="h-full flex flex-col gap-[55]">
         <div className="flex flex-col gap-[25]">

@@ -5,37 +5,37 @@ type ErrorState = {
 
 type InputProps<T extends ErrorState> = {
   dataInput: string;
-  color?: Colors;
   placeholder?: string;
   defaultValue?: string | number;
   state?: T;
   Optional?: boolean;
+  color: Colors;
 };
 
-const InputField = <T extends ErrorState>({
+const Inputbox = <T extends ErrorState>({
+  state,
   dataInput,
-  color = "--black",
   placeholder,
   defaultValue,
-  state,
-  Optional,
+  Optional = false,
+  color,
 }: InputProps<T>) => {
   const hasError = state?.error?.[dataInput];
+
   return (
-    <input
-      type="text"
-      placeholder={placeholder}
+    <textarea
       style={{
         borderColor: `var(${color})`,
         color: `var(${color})`,
       }}
-      className={`w-full h-[40] px-4 py-2 border-2 rounded-[5] outline-none bg-transparent focus:ring-0
+      className={`w-full h-[300] px-4 py-2 border-2 rounded-[5] outline-none bg-transparent focus:ring-0
       ${hasError ? "border-(--red)" : "border-(--borderColor)"}`}
       name={dataInput}
+      placeholder={placeholder}
       defaultValue={defaultValue ?? ""}
       required={!Optional}
     />
   );
 };
 
-export default InputField;
+export default Inputbox;
