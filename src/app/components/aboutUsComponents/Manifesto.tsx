@@ -7,7 +7,7 @@ import ParallaxSecThree from "../parallaxComponents/ParallaxSecThree";
 const Manifesto = () => {
   return (
     <div className="w-full relative">
-      <div className="S_Content_width h-auto p-8 gap-8 bg-(--black) text-(--white)">
+      <div className="S_Content_width h-auto md:p-8 p-4 md:gap-8 bg-(--black) text-(--white)">
         <div className="flex justify-center">
           <HeaderOneComp text="Meet our sweet manifesto" />
         </div>

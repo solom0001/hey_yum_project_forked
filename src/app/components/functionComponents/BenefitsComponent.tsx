@@ -7,7 +7,7 @@ type BenefitIconProps = {
 
 const Benefits = () => {
   return (
-    <div className="grid grid-cols-4 gap-4 Textbox_width max-w-[500]! mx-auto">
+    <div className="grid grid-cols-4 gap-4 Textbox_width mx-auto">
       <div className="col-span-full">
         <h2 className="text-center mx-auto">Better for You</h2>
       </div>
