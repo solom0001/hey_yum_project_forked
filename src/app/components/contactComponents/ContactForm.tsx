@@ -5,9 +5,9 @@ import { submitContact, type ContactFormState } from "@/app/action/action";
 import { useFormStatus } from "react-dom";
 import InputField from "../utilityComponents/FormComponents/InputField";
 import Error from "../utilityComponents/FormComponents/Error";
+import SubmitButton from "../utilityComponents/SubmitButton";
 import Success from "../utilityComponents/FormComponents/Success";
 import Inputbox from "../utilityComponents/FormComponents/InputBox";
-import SubmitButton from "../utilityComponents/SubmitButton";
 
 const initialState: ContactFormState = {
   success: false,
