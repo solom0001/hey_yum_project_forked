@@ -77,7 +77,7 @@ const DetailsInfo = ({ productDetails }: Props) => {
     localStorage.setItem("basket", JSON.stringify(basket));
   };
   return (
-    <div className="max-w-[650] h-fit flex flex-col px-4 sticky top-0  pt-[6rem]">
+    <div className="max-w-[650] h-fit flex flex-col px-4 sticky top-0  md:pt-[6rem]">
       <h3 className="">10 poser, 100g (1kg)</h3>
       <div className="flex">
         <h2 className="mb-2.5">{productDetails.name}</h2>

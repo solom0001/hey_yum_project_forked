@@ -35,15 +35,15 @@ const ProductsComponent = async ({ text }: Props) => {
   console.log(products);
 
   return (
-    <div className="ContentWitdh gap-8 ">
+    <div className="ContentWitdh md:gap-8 gap-2 ">
       <HeaderOneComp text={text} />
-      <div className="gap-4 grid grid-cols-4">
+      <div className="gap-4 grid grid-cols-2 md:grid-cols-4 justify-center overflow-hidden!">
         {products.map((product) => (
           <Link
             key={product.id}
             href={`/detail/${product.id}?id=${product.id}`}
           >
-            <div className="max-w-[400] flex flex-col gap-1">
+            <div className="max-w-[250] w-full md:max-w-[400] flex flex-col gap-1">
               <div className="relative w-full max-h-[500px] overflow-hidden grid rounded-(--card_rounded) group">
                 {/* Base image */}
                 <img
@@ -64,7 +64,7 @@ const ProductsComponent = async ({ text }: Props) => {
               </div>
               <h2 className="text-center font-lilita">{product.name}, 1kg</h2>
 
-              <div className="flex gap-2 mx-auto">
+              <div className="flex gap-2 flex-wrap justify-center max-h-[50] md:max-h-[fit] w-full">
                 {product.product_tags.map((tag, index) => (
                   <span className="text-[12px]" key={tag.tags.name}>
                     {tag.tags.name}
@@ -74,7 +74,7 @@ const ProductsComponent = async ({ text }: Props) => {
                   </span>
                 ))}
               </div>
-              <p className="text-center font-[400]! text-[30px]! uppercase mt-1">
+              <p className="text-center font-[400]! text-[1.5rem]! md:text-[30px]! uppercase mt-1">
                 250 kr
               </p>
             </div>
