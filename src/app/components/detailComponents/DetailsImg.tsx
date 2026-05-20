@@ -33,7 +33,7 @@ const DetailsImg = ({ productDetails }: Props) => {
   };
 
   return (
-    <div className="max-w-[530] flex-col flex gap-[20] pt-[6rem]">
+    <div className="max-w-[530] flex-col flex gap-[20] md:pt-[6rem] overflow-hidden">
       <Lightbox open={index >= 0} index={index} close={() => setIndex(-1)} slides={slides} plugins={[Fullscreen]} />
       <div className="relative w-full max-h-[750px] overflow-hidden hidden md:grid rounded-(--card_rounded) group">
         {/* Base image */}
@@ -115,23 +115,26 @@ const DetailsImg = ({ productDetails }: Props) => {
         </div>
       </div>
 
+      {/*mobile */}
       <div className="md:hidden">
         <div
           ref={scrollRef}
+          onScroll={handleScroll}
           className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-4 
                    [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {slides.map((slide, i) => (
-            <div key={i} className="flex-shrink-0 w-full snap-center cursor-zoom-in" onClick={() => setIndex(i)}>
-              <img src={slide.src} alt={productDetails.name} className="w-full object-cover rounded-(--card_rounded)" />
+            <div key={i} className="flex-shrink-0 h-[45vh] w-full snap-center" onClick={() => setIndex(i)}>
+              <img loading="eager" src={slide.src} alt={productDetails.name} className="object-center h-full w-full object-cover " />
             </div>
           ))}
         </div>
-        <div className="flex justify-center gap-2 mt-3">
-          {slides.map((_, i) => (
-            <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? "w-6 bg-foreground" : "w-1.5 bg-foreground/30"}`} />
-          ))}
-        </div>
+      </div>
+      {/*dots/indicators */}
+      <div className="flex md:hidden justify-center gap-2 mt-3">
+        {slides.map((_, i) => (
+          <div key={i} className={`h-1.5 rounded-full border-[0.5]  transition-all duration-300 ${i === current ? "w-6 bg-(--black)" : "w-1.5 bg-(--white)"}`} />
+        ))}
       </div>
     </div>
   );
