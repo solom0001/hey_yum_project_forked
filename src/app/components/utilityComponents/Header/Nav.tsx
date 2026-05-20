@@ -2,6 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Basket from "./Basket";
+import BasketItems from "./BasketItems";
 
 type Page = "home" | "products" | "aboutUs" | "contact";
 
@@ -11,6 +13,7 @@ type Props = {
 
 const Nav = ({ page }: Props) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [openBasket, setOpenBasket] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,41 +43,48 @@ const Nav = ({ page }: Props) => {
           />
         </Link>
         <div className="w-fit h-full flex gap-6 justify-between items-center">
-          <Link href={"/productList"}>
+          <Link href={"/productList"} className="flex flex-col">
             <p
               className={` hover:scale-110 transition-all duration-100 ease-in
-            ${page === "products" && "font-semibold"} `}
+            ${page === "products" && "font-bold! "} `}
             >
               Products
             </p>
+            {page === "products" && (
+              <div className="h-0.5 w-full bg-(--black)"></div>
+            )}
           </Link>
-          <Link href={"/aboutUs"}>
+          <Link href={"/aboutUs"} className="flex flex-col">
             <p
               className={` hover:scale-110 transition-all duration-100 ease-in
-            ${page === "aboutUs" && "font-semibold"} `}
+            ${page === "aboutUs" && "font-bold!"} `}
             >
               About us
             </p>
+            {page === "aboutUs" && (
+              <div className="h-0.5 w-full bg-(--black)"></div>
+            )}
           </Link>
-          <Link href={"/contact"}>
+          <Link href={"/contact"} className="flex flex-col">
             <p
               className={` hover:scale-110 transition-all duration-100 ease-in
-            ${page === "contact" && "font-semibold"} `}
+            ${page === "contact" && "font-bold!"} `}
             >
               Contact
             </p>
+            {page === "contact" && (
+              <div className="h-0.5 w-full bg-(--black)"></div>
+            )}
           </Link>
         </div>
-        <div className="max-h-[50%] aspect-square">
-          <Image
-            src="/assets/svg/basket.svg"
-            alt="image"
-            width={100}
-            height={100}
-            className="object-center object-cover hover:scale-110 hover:cursor-pointer transition-all duration-100 ease-in"
-          />
-        </div>
+        <Basket openBasket={openBasket} setOpenBasket={setOpenBasket} />
       </nav>
+      <BasketItems openBasket={openBasket} setOpenBasket={setOpenBasket} />
+      <div
+        onClick={() => setOpenBasket(!openBasket)}
+        className={`z-20 absolute top-0 right-0 w-screen h-screen
+            transition-all duration-200 ease-in  ${openBasket === true ? "bg-black/30" : "bg-bg-black/0 pointer-events-none"}`}
+      ></div>
     </div>
   );
 };
