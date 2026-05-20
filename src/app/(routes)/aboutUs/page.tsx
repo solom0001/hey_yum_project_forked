@@ -8,7 +8,8 @@ import ParallaxSecOne from "@/app/components/parallaxComponents/ParallaxSecOne";
 import ParallaxSecTwo from "@/app/components/parallaxComponents/ParallaxSecTwo";
 import Nav from "@/app/components/utilityComponents/Header/Nav";
 
-export default function Aboutus() {
+export default async function Aboutus() {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   return (
     <div className="grid gap-16 h-fit">
       <Nav page="aboutUs" />

@@ -10,7 +10,7 @@ const FunctionSection = () => {
 
   return (
     <div className="flex flex-col gap-18">
-      <div className="grid grid-cols-[2fr_1fr] gap-10 items-center">
+      <div className="flex flex-col justify-center md:grid md:grid-cols-[2fr_1fr] gap-10 items-center">
         <div className="flex flex-col items-center">
           <span className="w-fit flex flex-col gap-7.5">
             {/* <h1>TASTY BY NATURE</h1> */}
@@ -21,13 +21,13 @@ const FunctionSection = () => {
 
         <Benefits />
       </div>
-      <div ref={ref} className="grid grid-cols-2 gap-4 md:gap-0 md:grid-cols-[1fr_1fr_1fr] scroll-reveal">
+      <div ref={ref} className="grid grid-cols-2 gap-0! md:grid-cols-[1fr_1fr_1fr] scroll-reveal items-end">
         <div className="relative col-span-full md:col-span-1 md:h-[450] reveal-item stagger-1">
           <Image loading="eager" src="/assets/images/home/loveSpring_sowerFlower_homeenv_shot.png" sizes="(max-width: 768px) 100vw, 50vw" fill alt="image of candy" className="object-center object-cover" />
         </div>
 
-        <div className="relative sm:col-start-2 h-[250] md:h-[300] reveal-item stagger-3">
-          <Image loading="eager" src="/assets/images/home/all_flavors_homeenv_shot.png" sizes="(max-width: 768px) 100vw, 50vw" fill alt="image of candy" className="object-bottom object-contain " />
+        <div className="relative row-start-2 md:row-start-1 col-start-2 h-[250] md:h-[300] reveal-item stagger-3">
+          <Image loading="eager" src="/assets/images/home/all_flavors_homeenv_shot.png" sizes="(max-width: 768px) 100vw, 50vw" fill alt="image of candy" className="object-bottom object-cover " />
         </div>
         <div className="relative h-[250] md:h-[450] reveal-item stagger-1">
           <Image loading="eager" src="/assets/images/home/triassicGarden_homeenv_shot.png" sizes="(max-width: 768px) 100vw, 50vw" fill alt="image of candy" className="object-center object-cover" />
