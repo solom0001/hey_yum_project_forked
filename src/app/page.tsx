@@ -13,10 +13,10 @@ import ScrollOpenin from "./components/utilityComponents/ScrollOpenin";
 
 export default function Home() {
   return (
-    <div className="grid">
+    <div className="grid ">
       <main className="">
         <Hero />
-        <div className="relative mt-[-60]">
+        <div className=" mt-[-60]">
           <Nav page="home" />
 
           <ScrollOpenin />
@@ -34,7 +34,9 @@ export default function Home() {
 
           <SocialContent />
           <div className="air w-full h-[140]"></div>
-          <Where />
+          <div className="grid overflow-hidden">
+            <Where />
+          </div>
         </div>
       </main>
     </div>

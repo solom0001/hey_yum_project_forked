@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakarta.variable} ${lilitaOne.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full grid">
         {children}
 
         <Footer />

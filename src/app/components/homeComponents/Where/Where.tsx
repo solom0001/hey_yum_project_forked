@@ -3,7 +3,7 @@ import Carousel from "./Carousel";
 
 const Where = () => {
   return (
-    <div className="fullbleed grid w-screen">
+    <div className=" grid overflow-hidden w-full">
       <div className="mx-8 mb-[50]">
         <HeaderOneComp text="Where you might have seen us" />
       </div>

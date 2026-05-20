@@ -43,7 +43,7 @@ const BasketItems = ({ openBasket, setOpenBasket }: Props) => {
 
   return (
     <div
-      className={`z-21 max-w-[400] w-full h-screen overflow-hidden absolute top-0 right-0 ${
+      className={`z-26 max-w-[400] w-full h-screen overflow-hidden fixed top-0 right-0 ${
         openBasket ? "" : "pointer-events-none"
       }`}
     >
