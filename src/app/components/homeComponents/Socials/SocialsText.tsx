@@ -2,7 +2,7 @@ import SocialLinks from "../../utilityComponents/SocialLinks";
 
 const SocialText = () => {
   return (
-    <div className="grid text-center gap-2 max-w-[600]">
+    <div className="grid text-center gap-2 max-w-[600] px-4 mb:px-0">
       <h1>Our socials</h1>
       <h2>
         Follow us on instagram <br /> and Facebook

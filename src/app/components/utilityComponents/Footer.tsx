@@ -22,7 +22,7 @@ const Footer = () => {
   };
   const [state, formAction] = useActionState(submitMail, initialState);
   return (
-    <div className="fullbleed bg-(--black) h-[750] md:h-[550] flex flex-col gap-[50] px-[1rem] py-[2rem] md:grid md:grid-cols-[1fr_2fr]">
+    <div className="w-full bg-(--black) h-[750] md:h-[550] flex flex-col gap-[50] px-4 py-8 md:grid md:grid-cols-[1fr_2fr]">
       <div className="flex flex-col gap-[20] md:order-2">
         <p
           className="text-[24px]! text-(--white) font-bold text-center 
