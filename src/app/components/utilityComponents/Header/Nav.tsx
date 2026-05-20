@@ -42,9 +42,7 @@ const Nav = ({ page }: Props) => {
             >
               Products
             </p>
-            {page === "products" && (
-              <div className="h-0.5 w-full bg-(--black)"></div>
-            )}
+            {page === "products" && <div className="h-0.5 w-full bg-(--black)"></div>}
           </Link>
           <Link href={"/aboutUs"} className="flex flex-col">
             <p
@@ -53,9 +51,7 @@ const Nav = ({ page }: Props) => {
             >
               About us
             </p>
-            {page === "aboutUs" && (
-              <div className="h-0.5 w-full bg-(--black)"></div>
-            )}
+            {page === "aboutUs" && <div className="h-0.5 w-full bg-(--black)"></div>}
           </Link>
           <Link href={"/contact"} className="flex flex-col">
             <p
@@ -64,14 +60,12 @@ const Nav = ({ page }: Props) => {
             >
               Contact
             </p>
-            {page === "contact" && (
-              <div className="h-0.5 w-full bg-(--black)"></div>
-            )}
+            {page === "contact" && <div className="h-0.5 w-full bg-(--black)"></div>}
           </Link>
         </div>
 
         <div className=" flex flex-nowrap gap-8 h-full w-auto items-center">
-             <Basket openBasket={openBasket} setOpenBasket={setOpenBasket} />
+          <Basket openBasket={openBasket} setOpenBasket={setOpenBasket} />
 
           <div onClick={() => setIsOpen(!isOpen)} className="flex relative z-0 md:hidden h-full w-fit flex-col gap-2 justify-center transition-all duration-300 ease-in-out ">
             <span className={`block w-8 h-[2] rounded-2xl bg-(--black) transition-all duration-300  ${isOpen ? "translate-y-[10px] rotate-45" : ""}`}></span>
@@ -106,7 +100,6 @@ const Nav = ({ page }: Props) => {
             </div>
           </div>
         </div>
-=
       </nav>
       <BasketItems openBasket={openBasket} setOpenBasket={setOpenBasket} />
       <div
