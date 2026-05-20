@@ -13,11 +13,30 @@ type ProductResponse = {
   card_imgs: string[];
   details_imgs: string[];
   description: string;
+
   product_tags: {
     tags: {
       name: string;
       tag_icons: string;
     };
+  }[];
+
+  product_ingredients: {
+    ingredients: {
+      name: string;
+    };
+  }[];
+
+  product_nutrition: {
+    fat: number;
+    salt: number;
+    sugars: number;
+    protein: number;
+    energy_kj: number;
+    saturates: number;
+    per_amount: string;
+    energy_kcal: number;
+    carbohydrates: number;
   }[];
 };
 
@@ -27,7 +46,7 @@ export default async function ProductsPage({ params }: Props) {
   console.log("id =", id);
 
   const response = await fetch(
-    `https://towbvljdqlfyzhysgbtd.supabase.co/rest/v1/products?select=*,product_tags(tags(*))&id=eq.${id}`,
+    `https://towbvljdqlfyzhysgbtd.supabase.co/rest/v1/products?select=*,product_tags(tags(*)),product_ingredients(ingredients(name)),product_nutrition(*)&id=eq.${id}`,
     {
       headers: {
         apikey: `sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP`,
