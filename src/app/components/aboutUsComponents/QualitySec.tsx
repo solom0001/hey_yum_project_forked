@@ -28,10 +28,10 @@ const QualitySec = () => {
         <div className="grid col-span-full items-center justify-center w-full max-h-[230px]!">
           <HeaderOneComp text="Quality" />
         </div>
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="max-h-[500px] ">
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="">
           <TextBox header="High quality is our baseline">
             <p>When sourcing high-quality raw materials, we ensure compliance with the strict EU organic requirements along the entire supply chain. Regular external controls according to international standards prove the strict compliance with the EU organic guidelines as well as IFS and HACCP standards at “higher level”.</p>
-            <div className="grid grid-cols-[1fr_1fr] gap-5 max-h-[350px] mt-4">
+            <div className="grid grid-cols-[1fr_1fr] gap-5 mt-4">
               <Image src="/assets/images/home/eu-organic-logo.png" alt="image" width={500} height={500} className="object-fill object-center" />
               <Image src="/assets/images/home/ifs-logo-1.png" alt="image" width={500} height={500} className="object-fill object-center" />
             </div>
@@ -56,7 +56,7 @@ const QualitySec = () => {
             </ul>
           </TextBox>
         </motion.div>
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="max-h-[700px] -mt-[280px] ">
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="md:-mt-[280px]!   ">
           <TextBox header="Member of organic Denmark">
             <p>
               As a member of Organic Denmark, we support an organization that has been transforming the organic sector for nearly 35 years. Organic Denmark is a pioneering lobbyist working to shape policies that drive organic market growth and turn the food sector into a catalyst for green development.

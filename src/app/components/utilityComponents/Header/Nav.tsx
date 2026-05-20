@@ -13,6 +13,7 @@ type Props = {
 
 const Nav = ({ page }: Props) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [openBasket, setOpenBasket] = useState(false);
 
   useEffect(() => {
@@ -28,22 +29,13 @@ const Nav = ({ page }: Props) => {
   }, []);
 
   return (
-    <div
-      style={{ opacity: isVisible ? 1 : 0, transition: "opacity 0.4s ease" }}
-      className="grid fixed top-0 left bg-(--white) z-100 border-b-3 border-(--black) w-full ContentWitdh"
-    >
+    <div style={{ opacity: isVisible ? 1 : 0, transition: "opacity 0.4s ease" }} className="grid fixed top-0 left bg-(--white) z-100 border-b-3 border-(--black) w-full ContentWitdh">
       <nav className="flex justify-between h-[60] *:my-auto">
         <Link href={"/"}>
-          <Image
-            src="/assets/images/home/Logo.svg"
-            alt="image"
-            width={100}
-            height={100}
-            className="object-center w-[120] h-auto object-cover hover:scale-110 transition-all duration-100 ease-in"
-          />
+          <Image src="/assets/images/home/Logo.svg" alt="image" width={100} height={100} className="object-center w-[120] h-auto object-cover hover:scale-110 transition-all duration-100 ease-in" />
         </Link>
-        <div className="w-fit h-full flex gap-6 justify-between items-center">
-          <Link href={"/productList"} className="flex flex-col">
+        <div className="w-fit hidden md:flex h-full  gap-6 justify-between items-center">
+          <Link href={"/productList"}>
             <p
               className={` hover:scale-110 transition-all duration-100 ease-in
             ${page === "products" && "font-bold! "} `}
@@ -77,7 +69,44 @@ const Nav = ({ page }: Props) => {
             )}
           </Link>
         </div>
-        <Basket openBasket={openBasket} setOpenBasket={setOpenBasket} />
+
+        <div className=" flex flex-nowrap gap-8 h-full w-auto items-center">
+             <Basket openBasket={openBasket} setOpenBasket={setOpenBasket} />
+
+          <div onClick={() => setIsOpen(!isOpen)} className="flex relative z-0 md:hidden h-full w-fit flex-col gap-2 justify-center transition-all duration-300 ease-in-out ">
+            <span className={`block w-8 h-[2] rounded-2xl bg-(--black) transition-all duration-300  ${isOpen ? "translate-y-[10px] rotate-45" : ""}`}></span>
+            <span className={` w-8 h-[2] rounded-2xl bg-(--black) transition-all duration-300  ${isOpen ? "opacity-0" : "opacity-100"}`}></span>
+            <span className={`block w-8 h-[2] rounded-2xl bg-(--black) transition-all duration-300  ${isOpen ? "-translate-y-[10px] -rotate-45" : ""}`}></span>
+
+            <div className={`absolute flex flex-col gap-8 *:max-h-[35] z-10 top-full right-0  h-[40vh]  w-[40vw] p-4 bg-(--black) text-(--white)! transition-all duration-300  ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+              <Link href={"/productList"}>
+                <p
+                  className={`  py-2 border-b-2 active:scale-[1.05] active:font-bold! transition-scale
+            ${page === "products" && "font-semibold"} `}
+                >
+                  Products
+                </p>
+              </Link>
+              <Link href={"/aboutUs"}>
+                <p
+                  className={`  py-2 border-b-2 active:scale-[1.05] active:font-bold! transition-scale
+            ${page === "aboutUs" && "font-semibold"} `}
+                >
+                  About us
+                </p>
+              </Link>
+              <Link href={"/contact"}>
+                <p
+                  className={` py-2 border-b-2 active:scale-[1.05] active:font-bold! transition-scale
+            ${page === "contact" && "font-semibold"} `}
+                >
+                  Contact
+                </p>
+              </Link>
+            </div>
+          </div>
+        </div>
+=
       </nav>
       <BasketItems openBasket={openBasket} setOpenBasket={setOpenBasket} />
       <div
