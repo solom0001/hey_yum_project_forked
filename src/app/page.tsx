@@ -14,26 +14,28 @@ import ScrollOpenin from "./components/utilityComponents/ScrollOpenin";
 export default function Home() {
   return (
     <div className="grid">
-      <Nav page="home" />
-
       <main className="">
         <Hero />
-        <ScrollOpenin />
-        <ParallaxSecTwo />
-        <div className="air w-full h-[140]"></div>
+        <div className="relative mt-[-60]">
+          <Nav page="home" />
 
-        <FunctionSection />
-        <div className="air w-full h-[140]"></div>
+          <ScrollOpenin />
+          <ParallaxSecTwo />
+          <div className="air w-full h-[140]"></div>
 
-        <ProductsComponent text="Our Products" />
-        <div className="air w-full h-[140]"></div>
+          <FunctionSection />
+          <div className="air w-full h-[140]"></div>
 
-        <Passion page="home" />
-        <div className="air w-full h-[140]"></div>
+          <ProductsComponent text="Our Products" />
+          <div className="air w-full h-[140]"></div>
 
-        <SocialContent />
-        <div className="air w-full h-[140]"></div>
-        <Where />
+          <Passion page="home" />
+          <div className="air w-full h-[140]"></div>
+
+          <SocialContent />
+          <div className="air w-full h-[140]"></div>
+          <Where />
+        </div>
       </main>
     </div>
   );

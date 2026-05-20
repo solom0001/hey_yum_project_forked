@@ -16,20 +16,20 @@ const Nav = ({ page }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [openBasket, setOpenBasket] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsVisible(true);
-        window.removeEventListener("scroll", handleScroll); //efter visible for førstegange, fjernede event listener
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 0) {
+  //       setIsVisible(true);
+  //       window.removeEventListener("scroll", handleScroll); //efter visible for førstegange, fjernede event listener
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
-    <div style={{ opacity: isVisible ? 1 : 0, transition: "opacity 0.4s ease" }} className="grid fixed top-0 left bg-(--white) z-100 border-b-3 border-(--black) w-full ContentWitdh">
+    <div className="grid sticky top-0 left bg-(--white) z-100 border-b-3 border-t-3 border-(--black) w-full ContentWitdh">
       <nav className="flex justify-between h-[60] *:my-auto">
         <Link href={"/"}>
           <Image src="/assets/images/home/Logo.svg" alt="image" width={100} height={100} className="object-center w-[120] h-auto object-cover hover:scale-110 transition-all duration-100 ease-in" />
