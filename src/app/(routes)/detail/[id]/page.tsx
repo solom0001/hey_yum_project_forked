@@ -67,7 +67,7 @@ export default async function ProductsPage({ params }: Props) {
       <Nav page="products" />
 
       <div className="ContentWitdh ">
-        <div className="grid gap-[20] grid-cols-[2fr_3fr] relative">
+        <div className="grid gap-[20] md:grid-cols-[2fr_3fr] relative">
           <DetailsImg productDetails={productDetails} />
           <DetailsInfo productDetails={productDetails} />
         </div>
