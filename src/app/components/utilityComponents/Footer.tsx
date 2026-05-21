@@ -32,7 +32,7 @@ const Footer = () => {
         </p>
         <form action={formAction} className="flex flex-col gap-4">
           <div className="flex flex-col gap-4 md:flex-row">
-            <div className="w-[345] flex flex-col gap-2 mx-auto md:mx-0">
+            <div className="max-w-[345] w-full flex flex-col gap-2 mx-auto md:mx-0">
               <InputField
                 dataInput="subscriptionMail"
                 color="--white"

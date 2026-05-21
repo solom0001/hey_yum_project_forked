@@ -226,7 +226,7 @@ const Herocard = ({
         width={600}
         height={224}
         alt="candy package"
-        className="col-1 row-1 ml-auto animate-pack-in md:max-w-[500] max-w-[400] mt-[-70] md:mt-[0]"
+        className="col-1 row-1 ml-auto animate-pack-in md:max-w-[500] max-w-[350px] mt-[-70] md:mt-[0]"
       />
       <div className="z-20 md:hidden mt-auto">
         <div

@@ -62,20 +62,24 @@ const ProductsComponent = async ({ text }: Props) => {
                   group-hover:[clip-path:circle(150%_at_50%_50%)]"
                 />
               </div>
-              <h2 className="text-center font-lilita">{product.name}, 1kg</h2>
+              <h2 className="text-center font-lilita truncate">
+                {product.name}
+              </h2>
 
-              <div className="flex gap-2 flex-wrap justify-center max-h-[50] md:max-h-[fit] w-full">
+              <div className=" gap-1 flex flex-wrap justify-center max-h-[50] md:max-h-[fit] w-full">
                 {product.product_tags.map((tag, index) => (
-                  <span className="text-[12px]" key={tag.tags.name}>
-                    {tag.tags.name}
-                    {index !== product.product_tags.length - 1 && (
-                      <span>/</span>
-                    )}
-                  </span>
+                  <div key={tag.tags.name} className="flex w-fit truncate">
+                    <p className="text-[10px]! truncate w-fit">
+                      {tag.tags.name}
+                      {index !== product.product_tags.length - 1 && (
+                        <span className="text-[10px]!"> /</span>
+                      )}
+                    </p>
+                  </div>
                 ))}
               </div>
-              <p className="text-center font-[400]! text-[1.5rem]! md:text-[30px]! uppercase mt-1">
-                250 kr
+              <p className="text-center font-[400]! text-[1.5rem]! md:text-[1.6rem]! lg:text-[2rem]! uppercase mt-1">
+                250 kr / kg
               </p>
             </div>
           </Link>

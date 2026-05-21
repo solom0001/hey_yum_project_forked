@@ -21,16 +21,16 @@ export default function Home() {
 
           <ScrollOpenin />
           <ParallaxSecTwo />
-          <div className="air w-full h-[140]"></div>
+          <div className="air w-full h-[70]"></div>
 
           <FunctionSection />
-          <div className="air w-full h-[140]"></div>
+          <div className="air w-full md:h-[140] h-[70]"></div>
 
           <ProductsComponent text="Our Products" />
-          <div className="air w-full h-[140]"></div>
+          <div className="air w-full md:h-[140] h-[70]"></div>
 
           <Passion page="home" />
-          <div className="air w-full h-[140]"></div>
+          <div className="air w-full md:h-[140]"></div>
 
           <SocialContent />
           <div className="air w-full h-[140]"></div>
