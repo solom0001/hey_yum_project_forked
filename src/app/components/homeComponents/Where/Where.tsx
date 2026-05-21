@@ -5,7 +5,9 @@ const Where = () => {
   return (
     <div className=" grid overflow-hidden w-full">
       <div className="mx-8 mb-[50]">
-        <HeaderOneComp text="Where you might have seen us" />
+        <h1>
+          Where you might have <br></br> seen us
+        </h1>
       </div>
       <Carousel direction="right" />
       <div className="mt-[-2]">
