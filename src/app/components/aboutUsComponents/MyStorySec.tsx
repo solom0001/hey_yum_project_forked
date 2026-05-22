@@ -9,7 +9,10 @@ const MyStorySec = () => {
         <div className="flex justify-center">
           <HeaderOneComp text="My Story" />
         </div>
-        <div className="grid md:grid-cols-2">
+        <div className="flex flex-col md:grid md:grid-cols-2 ">
+
+          <div className="order-2 md:order-1">
+
           <TextBox header="It all started with a sweet idea...">
             <p>
               In 2016 I created HEY YUM! with the intention to redefine candy
@@ -28,15 +31,16 @@ const MyStorySec = () => {
               supermarked. That is, until you hit the aisle with sweets…
             </p>
           </TextBox>
-          <div className="w-full h-full relative overflow-hidden pt-4 ">
+          </div>
+          <div className="w-full h-[350] md:h-full relative overflow-hidden pt-4 order-1 ">
             <Image
               src="/assets/images/home/HEY-YUM-og-Henriette.png"
               alt="image"
               fill
-              className="object-cover py-4 top-30 left-[40]"
+              className="object-cover py-4 top-30 left-[40] "
             />
           </div>
-          <div className="w-[100%] px-4 col-span-2">
+          <div className="w-[100%] px-4 col-span-2 order-3">
             <p>
               I started looking in other shoppers baskets and noticed that
               people buy a great deal of organic products, but then they go to

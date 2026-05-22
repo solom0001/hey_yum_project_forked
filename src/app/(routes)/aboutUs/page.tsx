@@ -18,7 +18,6 @@ export default function Aboutus() {
       <Manifesto />
       <QualitySec />
       <MyStorySec />
-      <div className="h-[1000]"></div>
     </div>
   );
 }
