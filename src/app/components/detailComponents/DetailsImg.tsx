@@ -20,7 +20,12 @@ type Props = {
 const DetailsImg = ({ productDetails }: Props) => {
   const [index, setIndex] = useState(-1);
 
-  const slides = [{ src: productDetails.card_imgs[0] }, { src: productDetails.details_imgs[1] }, { src: productDetails.details_imgs[2] }, { src: productDetails.details_imgs[1] }];
+  const slides = [
+    { src: productDetails.card_imgs[0] },
+    { src: productDetails.details_imgs[1] },
+    { src: productDetails.details_imgs[2] },
+    { src: productDetails.details_imgs[1] },
+  ];
 
   //dot indicators to carousel
   const [current, setCurrent] = useState(0);
@@ -28,16 +33,28 @@ const DetailsImg = ({ productDetails }: Props) => {
 
   const handleScroll = () => {
     if (!scrollRef.current) return;
-    const index = Math.round(scrollRef.current.scrollLeft / scrollRef.current.offsetWidth);
+    const index = Math.round(
+      scrollRef.current.scrollLeft / scrollRef.current.offsetWidth,
+    );
     setCurrent(index);
   };
 
   return (
     <div className="max-w-[530] flex-col flex gap-[20] md:pt-[6rem] overflow-hidden">
-      <Lightbox open={index >= 0} index={index} close={() => setIndex(-1)} slides={slides} plugins={[Fullscreen]} />
+      <Lightbox
+        open={index >= 0}
+        index={index}
+        close={() => setIndex(-1)}
+        slides={slides}
+        plugins={[Fullscreen]}
+      />
       <div className="relative w-full max-h-[750px] overflow-hidden hidden md:grid rounded-(--card_rounded) group">
         {/* Base image */}
-        <img src={productDetails.card_imgs[0]} alt={productDetails.name} className="col-1 row-1 object-cover w-full h-full transition-transform duration-1000 ease-out group-hover:scale-110 " />
+        <img
+          src={productDetails.card_imgs[0]}
+          alt={productDetails.name}
+          className="col-1 row-1 object-cover w-full h-full transition-transform duration-1000 ease-out group-hover:scale-110 "
+        />
 
         {/* Reveal image */}
         <img
@@ -95,7 +112,7 @@ const DetailsImg = ({ productDetails }: Props) => {
         <div className="relative w-full max-h-[340] overflow-hidden rounded-(--card_rounded) group grid">
           <img
             loading="eager"
-            src={productDetails.details_imgs[1]}
+            src={productDetails.details_imgs[3]}
             alt={productDetails.name}
             className="object-cover w-full h-full
           transition-all duration-200 ease-in
@@ -124,8 +141,17 @@ const DetailsImg = ({ productDetails }: Props) => {
                    [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {slides.map((slide, i) => (
-            <div key={i} className="flex-shrink-0 h-[45vh] w-full snap-center" onClick={() => setIndex(i)}>
-              <img loading="eager" src={slide.src} alt={productDetails.name} className="object-center h-full w-full object-cover " />
+            <div
+              key={i}
+              className="flex-shrink-0 h-[45vh] w-full snap-center"
+              onClick={() => setIndex(i)}
+            >
+              <img
+                loading="eager"
+                src={slide.src}
+                alt={productDetails.name}
+                className="object-center h-full w-full object-cover "
+              />
             </div>
           ))}
         </div>
@@ -133,7 +159,10 @@ const DetailsImg = ({ productDetails }: Props) => {
       {/*dots/indicators */}
       <div className="flex md:hidden justify-center gap-2 mt-3">
         {slides.map((_, i) => (
-          <div key={i} className={`h-1.5 rounded-full border-[0.5]  transition-all duration-300 ${i === current ? "w-6 bg-(--black)" : "w-1.5 bg-(--white)"}`} />
+          <div
+            key={i}
+            className={`h-1.5 rounded-full border-[0.5]  transition-all duration-300 ${i === current ? "w-6 bg-(--black)" : "w-1.5 bg-(--white)"}`}
+          />
         ))}
       </div>
     </div>
