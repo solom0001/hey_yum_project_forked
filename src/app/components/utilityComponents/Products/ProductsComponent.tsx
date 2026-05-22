@@ -45,17 +45,17 @@ const ProductsComponent = async ({ text }: Props) => {
           >
             <div className="max-w-[250] w-full md:max-w-[400] flex flex-col gap-1">
               <div className="relative w-full max-h-[500px] overflow-hidden grid rounded-(--card_rounded) group">
-                {/* Base image */}
                 <img
                   src={product.card_imgs[0]}
                   alt={product.name}
+                  loading="eager"
                   className="col-1 row-1 object-cover w-full h-full transition-transform duration-1200 ease-out group-hover:scale-110 "
                 />
 
-                {/* Reveal image */}
                 <img
                   src={product.card_imgs[1]}
                   alt={product.name}
+                  loading="lazy"
                   className="col-1 row-1 object-cover w-full h-full
                   transition-all duration-1200 ease-[cubic-bezier(0.25,1,0.5,1)]
                   [clip-path:circle(0%_at_50%_50%)] group-hover:scale-110
