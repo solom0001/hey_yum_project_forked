@@ -35,7 +35,6 @@ const Basket = ({ openBasket, setOpenBasket }: Props) => {
         className="hover:scale-110 transition-all duration-100"
       />
 
-      {/* Orange dot */}
       {hasItems && (
         <span className="absolute top-0 right-[-4] w-4 h-4 bg-(--orange) rounded-full text-[10px] flex items-center justify-center text-white"></span>
       )}

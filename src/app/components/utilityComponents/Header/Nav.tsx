@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Basket from "./Basket";
 import BasketItems from "./BasketItems";
 
-type Page = "home" | "products" | "aboutUs" | "contact";
+type Page = "home" | "products" | "aboutUs" | "contact" | "";
 
 type Props = {
   page: Page;

@@ -10,6 +10,8 @@ import ParallaxSecTwo from "./components/parallaxComponents/ParallaxSecTwo";
 import ProductsComponent from "./components/utilityComponents/Products/ProductsComponent";
 import Where from "./components/homeComponents/Where/Where";
 import ScrollOpenin from "./components/utilityComponents/ScrollOpenin";
+import Reviews from "./components/homeComponents/Reviews/ReviewsCarousel";
+import ReviewsComp from "./components/homeComponents/Reviews/ReviewsComp";
 
 export default function Home() {
   return (
@@ -21,10 +23,12 @@ export default function Home() {
 
           <ScrollOpenin />
           <ParallaxSecTwo />
-          <div className="air w-full h-[70]"></div>
+          <div className="air w-full h-0 md:h-[70]"></div>
 
           <FunctionSection />
-          <div className="air w-full md:h-[140] h-[70]"></div>
+          <div className="air w-full md:h-[70] h-[30]"></div>
+          <ReviewsComp />
+          <div className="air w-full md:h-[70] h-[30]"></div>
 
           <ProductsComponent text="Our Products" />
           <div className="air w-full md:h-[140] h-[70]"></div>

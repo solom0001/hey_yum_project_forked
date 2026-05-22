@@ -204,7 +204,7 @@ const Herocard = ({
       style={{
         backgroundColor: `var(${bgColor})`,
       }}
-      className="grid md:grid-rows-1 grid-rows-[50%_50%] w-full h-full overflow-hidden shadow-[inset_-20px_0_70px_-30px_var(--black)]"
+      className="grid md:grid-rows-1 grid-rows-[50%_50%]  w-full h-full overflow-hidden shadow-[inset_-20px_0_70px_-30px_var(--black)]"
     >
       <div className="grid col-1 row-1 pt-8">
         <h1
