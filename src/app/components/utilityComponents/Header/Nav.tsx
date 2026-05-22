@@ -21,6 +21,7 @@ const Nav = ({ page }: Props) => {
       <nav className="flex justify-between h-[60] *:my-auto">
         <Link href={"/"}>
           <Image
+            loading="eager"
             src="/assets/images/home/Logo.svg"
             alt="image"
             width={100}

@@ -14,6 +14,7 @@ const Benefits = () => {
       </div>
       <BenefitIcon text="Less sugar">
         <Image
+          loading="lazy"
           src="/assets/svg/less-sugar.svg"
           alt="icon"
           width={100}
@@ -23,6 +24,7 @@ const Benefits = () => {
       </BenefitIcon>
       <BenefitIcon text="Organic">
         <Image
+          loading="lazy"
           src="/assets/svg/Organic.svg"
           alt="icon"
           width={100}
@@ -32,6 +34,7 @@ const Benefits = () => {
       </BenefitIcon>
       <BenefitIcon text="No artificial additives">
         <Image
+          loading="lazy"
           src="/assets/svg/no-artificial-additives.svg"
           alt="icon"
           width={100}
@@ -41,6 +44,7 @@ const Benefits = () => {
       </BenefitIcon>
       <BenefitIcon text="Great taste">
         <Image
+          loading="lazy"
           src="/assets/svg/great-taste.svg"
           alt="icon"
           width={100}

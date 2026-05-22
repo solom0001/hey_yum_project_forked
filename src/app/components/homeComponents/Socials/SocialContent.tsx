@@ -7,7 +7,7 @@ const SocialContent = () => {
       <div className="grid md:grid-cols-[1fr_1fr_2fr] gap-[20]">
         <div className="relative w-full h-[440] overflow-hidden  group hidden md:grid">
           <Image
-            loading="eager"
+            loading="lazy"
             src="/assets/images/home/Social-img-1.png"
             alt="Social Media image"
             fill
@@ -19,7 +19,7 @@ const SocialContent = () => {
           />
 
           <Image
-            loading="eager"
+            loading="lazy"
             src="/assets/svg/Mask_2.svg"
             alt="Mask"
             fill
@@ -31,7 +31,7 @@ const SocialContent = () => {
         </div>
         <div className="relative w-full h-[440] overflow-hidden  group hidden md:grid">
           <Image
-            loading="eager"
+            loading="lazy"
             src="/assets/images/home/Social-img-2.png"
             alt="Social Media image"
             fill
@@ -42,7 +42,7 @@ const SocialContent = () => {
           />
 
           <Image
-            loading="eager"
+            loading="lazy"
             src="/assets/svg/Mask_1.svg"
             alt="Mask"
             fill
@@ -59,7 +59,7 @@ const SocialContent = () => {
       <div className="grid md:grid-cols-[1fr_2fr_1fr] grid-cols-[3fr_2fr] gap-[20]">
         <div className="relative w-full h-[440] ml-auto overflow-hidden grid group md:col-2">
           <Image
-            loading="eager"
+            loading="lazy"
             src="/assets/images/home/Social-img-3.png"
             alt="Social Media image"
             fill
@@ -70,7 +70,7 @@ const SocialContent = () => {
           />
 
           <Image
-            loading="eager"
+            loading="lazy"
             src="/assets/svg/Mask_3.svg"
             alt="Mask"
             fill
@@ -83,7 +83,7 @@ const SocialContent = () => {
 
         <div className="relative w-full h-[440px] overflow-hidden grid group md:col-3">
           <Image
-            loading="eager"
+            loading="lazy"
             src="/assets/images/home/Social-img-4.png"
             alt="Social Media image"
             fill
@@ -94,7 +94,7 @@ const SocialContent = () => {
           />
 
           <Image
-            loading="eager"
+            loading="lazy"
             src="/assets/svg/Mask_4.svg"
             alt="Mask"
             fill

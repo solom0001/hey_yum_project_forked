@@ -222,6 +222,7 @@ const Herocard = ({
 
       <Image
         key={pack}
+        loading="eager"
         src={`/assets/images/home/${pack}-pack.png`}
         width={600}
         height={224}

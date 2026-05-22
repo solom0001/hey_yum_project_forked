@@ -10,31 +10,31 @@ const MyStorySec = () => {
           <HeaderOneComp text="My Story" />
         </div>
         <div className="flex flex-col md:grid md:grid-cols-2 ">
-
           <div className="order-2 md:order-1">
-
-          <TextBox header="It all started with a sweet idea...">
-            <p>
-              In 2016 I created HEY YUM! with the intention to redefine candy
-              and offer the world an alternative – one that’s ORGANIC, unjunked
-              and just better.
-              <br />
-              <br />
-              I went from designing digital solutions for Scandinavia’s largest
-              bank to dreaming up flavours for HEY YUM!’s organic range of
-              sweets – all becauce my son had been diagnosed with ADHD.
-              <br />
-              <br />I was looking for different ways to stabilize my son, and
-              organic food ended up working for us. I live just outside
-              Copenhagen, the Danish capitol, where organic food flourishes in
-              multiple spots from small grocery stores to all the major
-              supermarked. That is, until you hit the aisle with sweets…
-            </p>
-          </TextBox>
+            <TextBox header="It all started with a sweet idea...">
+              <p>
+                In 2016 I created HEY YUM! with the intention to redefine candy
+                and offer the world an alternative – one that’s ORGANIC,
+                unjunked and just better.
+                <br />
+                <br />
+                I went from designing digital solutions for Scandinavia’s
+                largest bank to dreaming up flavours for HEY YUM!’s organic
+                range of sweets – all becauce my son had been diagnosed with
+                ADHD.
+                <br />
+                <br />I was looking for different ways to stabilize my son, and
+                organic food ended up working for us. I live just outside
+                Copenhagen, the Danish capitol, where organic food flourishes in
+                multiple spots from small grocery stores to all the major
+                supermarked. That is, until you hit the aisle with sweets…
+              </p>
+            </TextBox>
           </div>
           <div className="w-full h-[350] md:h-full relative overflow-hidden pt-4 order-1 ">
             <Image
               src="/assets/images/home/HEY-YUM-og-Henriette.png"
+              loading="lazy"
               alt="image"
               fill
               className="object-cover py-4 top-30 left-[40] "

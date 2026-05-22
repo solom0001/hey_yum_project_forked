@@ -56,8 +56,8 @@ const DetailsImg = ({ productDetails }: Props) => {
           className="col-1 row-1 object-cover w-full h-full transition-transform duration-1000 ease-out group-hover:scale-110 "
         />
 
-        {/* Reveal image */}
         <img
+          loading="eager"
           src={productDetails.card_imgs[1]}
           alt={productDetails.name}
           className="col-1 row-1 object-cover w-full h-full
@@ -77,7 +77,7 @@ const DetailsImg = ({ productDetails }: Props) => {
         />
 
         <Image
-          loading="eager"
+          loading="lazy"
           src="/assets/svg/Mask_4.svg"
           alt="Mask"
           fill
@@ -90,7 +90,7 @@ const DetailsImg = ({ productDetails }: Props) => {
       <div className="hidden md:grid grid-cols-2 gap-[20]">
         <div className="relative w-full h-[340] overflow-hidden rounded-(--card_rounded) group grid">
           <img
-            loading="eager"
+            loading="lazy"
             src={productDetails.details_imgs[2]}
             alt={productDetails.name}
             className="object-cover col-1 row-1 w-full h-full
@@ -99,7 +99,7 @@ const DetailsImg = ({ productDetails }: Props) => {
           />
 
           <Image
-            loading="eager"
+            loading="lazy"
             src="/assets/svg/Mask_1.svg"
             alt="Mask"
             fill
@@ -111,7 +111,7 @@ const DetailsImg = ({ productDetails }: Props) => {
         </div>
         <div className="relative w-full max-h-[340] overflow-hidden rounded-(--card_rounded) group grid">
           <img
-            loading="eager"
+            loading="lazy"
             src={productDetails.details_imgs[3]}
             alt={productDetails.name}
             className="object-cover w-full h-full
@@ -120,7 +120,7 @@ const DetailsImg = ({ productDetails }: Props) => {
           />
 
           <Image
-            loading="eager"
+            loading="lazy"
             src="/assets/svg/Mask_2.svg"
             alt="Mask"
             fill

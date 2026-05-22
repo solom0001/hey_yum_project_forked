@@ -6,6 +6,7 @@ export default function ParallaxSecTwo() {
       {/*Top layer*/}
 
       <Image
+        loading="lazy"
         src="/assets/svg/playfully-tasty.svg"
         alt="image"
         width={1000}
@@ -16,6 +17,7 @@ export default function ParallaxSecTwo() {
       {/*Bottomlayer*/}
 
       <Image
+        loading="lazy"
         src="/assets/svg/paralllax-colored-shapes.svg"
         alt="image"
         width={1000}
