@@ -50,7 +50,7 @@ const Passion = ({ page }: { page: string }) => {
           </div>
           <div className="relative w-full h-[240] md:h-[660] order-1 ">
             <Image
-              loading="eager"
+              loading="lazy"
               src="/assets/images/home/all_flavors_homeenv_shot.png"
               alt="Social Media image"
               fill
@@ -62,7 +62,7 @@ const Passion = ({ page }: { page: string }) => {
         <div className="flex md:flex-col md:gap-[40] p-4">
           <div className="relative w-full h-[167] md:h-full mt-auto">
             <Image
-              loading="eager"
+              loading="lazy"
               src="/assets/images/home/basketOfYum.png"
               alt="Social Media image"
               fill
@@ -72,7 +72,7 @@ const Passion = ({ page }: { page: string }) => {
           </div>
           <div className="relative w-full h-[204] md:h-full">
             <Image
-              loading="eager"
+              loading="lazy"
               src="/assets/images/home/handOfGummies.png"
               alt="Social Media image"
               fill

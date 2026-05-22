@@ -83,7 +83,7 @@ const DetailsInfo = ({ productDetails }: Props) => {
       <div className="flex">
         <h2 className="mb-2.5">{productDetails.name}</h2>
         <Image
-          loading="eager"
+          loading="lazy"
           src={`/assets/images/details/eu-organic-logo-600x400_0-300x200 2.png`}
           width={300}
           height={150}
@@ -96,7 +96,6 @@ const DetailsInfo = ({ productDetails }: Props) => {
         {productDetails.product_tags.map((tag, index) => (
           <div key={tag.tags.name} className="flex flex-col">
             <img
-              loading="eager"
               src={tag.tags.tag_icons}
               alt={tag.tags.name}
               className="object-cover md:h-[70] h-[45] w-[45] md:w-[70] mx-auto"
