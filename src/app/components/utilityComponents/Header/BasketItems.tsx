@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import LinkButton from "../LinkButton";
 
 type BasketItem = {
   id: string;
@@ -38,7 +39,10 @@ const BasketItems = ({ openBasket, setOpenBasket }: Props) => {
 
   // Total price
   const totalPrice = useMemo(() => {
-    return basket.reduce((sum, item) => sum + item.price, 0);
+    return basket.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0,
+    );
   }, [basket]);
 
   return (
@@ -84,7 +88,9 @@ const BasketItems = ({ openBasket, setOpenBasket }: Props) => {
                       {item.name}
                     </h2>
                     <p className="mt-auto">Qty: {item.quantity}</p>
-                    <p>{item.price} kr</p>
+                    <p className="mt-auto font-bold">
+                      {item.price * item.quantity} kr
+                    </p>
                   </div>
                 </div>
 
@@ -104,6 +110,9 @@ const BasketItems = ({ openBasket, setOpenBasket }: Props) => {
         <div className="border-t pt-4 flex justify-between items-center">
           <h3 className="font-bold">Total</h3>
           <p className="font-bold">{totalPrice} kr</p>
+        </div>
+        <div className="[&>*>*]:w-full! mb-4">
+          <LinkButton link="basket" color="--black" text="Go to cart" />
         </div>
       </div>
     </div>

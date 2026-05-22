@@ -218,12 +218,34 @@ body {
 
 .scroller[data-animated="true"] .scroller_inner {
   width: fit-content;
-  animation: scroll 70s var(--animation_direction, forwards) linear infinite;
+  animation: scroll 65s var(--animation_direction, forwards) linear infinite;
   flex-wrap: nowrap;
 }
 
 .scroller[data-direction="right"] {
   --animation_direction: reverse;
+}
+
+.scroller[data-mask="true"] {
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 8%,
+    white 18%,
+    white 82%,
+    rgba(255, 255, 255, 0.3) 92%,
+    transparent 100%
+  );
+
+  mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 8%,
+    white 18%,
+    white 82%,
+    rgba(255, 255, 255, 0.3) 92%,
+    transparent 100%
+  );
 }
 
 @keyframes scroll {
