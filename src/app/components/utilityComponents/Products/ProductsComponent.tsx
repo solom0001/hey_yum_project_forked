@@ -78,7 +78,7 @@ const ProductsComponent = async ({ text }: Props) => {
                   </div>
                 ))}
               </div>
-              <p className="text-center font-[400]! text-[1.5rem]! md:text-[1.6rem]! lg:text-[2rem]! uppercase mt-1">
+              <p className="text-center font-[400]! text-[1.5rem]! md:text-[1.6rem]! lg:text-[1.8rem]! uppercase mt-1">
                 250 kr / kg
               </p>
             </div>

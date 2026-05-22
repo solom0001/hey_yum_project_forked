@@ -63,7 +63,7 @@ const Passion = ({ page }: { page: string }) => {
           <div className="relative w-full h-[167] md:h-full mt-auto">
             <Image
               loading="eager"
-              src="/assets/images/home/triassicGarden_homeenv_shot.png"
+              src="/assets/images/home/basketOfYum.png"
               alt="Social Media image"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -73,7 +73,7 @@ const Passion = ({ page }: { page: string }) => {
           <div className="relative w-full h-[204] md:h-full">
             <Image
               loading="eager"
-              src="/assets/images/home/loveSpring_sowerFlower_homeenv_shot.png"
+              src="/assets/images/home/handOfGummies.png"
               alt="Social Media image"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
