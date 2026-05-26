@@ -23,7 +23,7 @@ const Passion = ({ page }: { page: string }) => {
             </TextBox>
           </div>
           <div className="relative w-full h-[240] md:h-[660] order-1 ">
-            <Image loading="lazy" src="/assets/images/home/all_flavors_homeenv_shot.png" alt="Social Media image" fill className="object-cover object-center" />
+            <Image src="/assets/images/home/all_flavors_homeenv_shot.png" fetchPriority="high" alt="Social Media image" fill className="object-cover object-center" />
           </div>
         </div>
         <div className="flex md:flex-col md:gap-[40] p-4">
