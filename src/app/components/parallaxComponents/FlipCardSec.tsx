@@ -17,13 +17,12 @@ const FlipCardSec = () => {
           </div>
         }
         back={
-          <div className="aspect-square md:aspect-auto w-full h-full overflow-hidden">
+          <div className="relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
             <Image
               loading="lazy"
               src="/assets/images/aboutUs/lovespringflower.png"
               alt="image"
-              width={500}
-              height={500}
+              fill
               className="object-center object-cover"
             />
           </div>
@@ -42,13 +41,12 @@ const FlipCardSec = () => {
           </div>
         }
         back={
-          <div className=" aspect-square md:aspect-auto w-full h-full overflow-hidden">
+          <div className=" relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
             <Image
               loading="lazy"
               src="/assets/images/aboutUs/peak.png"
               alt="image"
-              width={500}
-              height={500}
+              fill
               className="object-center object-cover"
             />
           </div>
@@ -67,13 +65,12 @@ const FlipCardSec = () => {
           </div>
         }
         back={
-          <div className="aspect-square md:aspect-auto w-full h-full overflow-hidden">
+          <div className="relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
             <Image
               loading="lazy"
               src="/assets/images/aboutUs/sowerSweets.png"
               alt="image"
-              width={500}
-              height={500}
+              fill
               className="object-center object-cover"
             />
           </div>
@@ -82,13 +79,12 @@ const FlipCardSec = () => {
 
       <FlipCard
         front={
-          <div className="aspect-square md:aspect-auto w-full h-full overflow-hidden">
+          <div className="relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
             <Image
               loading="lazy"
               src="/assets/images/aboutUs/yellowRoom.png"
               alt="image"
-              width={500}
-              height={500}
+              fill
               className="object-center object-cover"
             />
           </div>
@@ -107,13 +103,12 @@ const FlipCardSec = () => {
       />
       <FlipCard
         back={
-          <div className=" aspect-square md:aspect-auto w-full h-full overflow-hidden">
+          <div className=" relative aspect-square md:aspect-auto w-full h-full overflow-hidden">
             <Image
               loading="lazy"
               src="/assets/images/aboutUs/pinkcupboard.png"
               alt="image"
-              width={500}
-              height={500}
+              fill
               className="object-center object-cover"
             />
           </div>
@@ -133,13 +128,12 @@ const FlipCardSec = () => {
 
       <FlipCard
         back={
-          <div className="aspect-square md:aspect-auto w-full h-full">
+          <div className="relative aspect-square md:aspect-auto w-full h-full">
             <Image
               loading="lazy"
               src="/assets/images/aboutUs/lovespringOpen.png"
               alt="image"
-              width={500}
-              height={500}
+              fill
               className="object center object-cover"
             />
           </div>

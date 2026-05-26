@@ -22,6 +22,7 @@ const SocialLinks = ({ color, size, gap }: Props) => {
     <div className={`flex`} style={{ gap: `${gap}px` }}>
       <Link
         href={"/"}
+        aria-label="Follow us on Instagram"
         style={
           {
             "--socialsbtn-color": `var(${color})`,
@@ -49,6 +50,7 @@ const SocialLinks = ({ color, size, gap }: Props) => {
       </Link>
       <Link
         href={"/"}
+        aria-label="Follow us on Facebook"
         style={
           {
             "--socialsbtn-color": `var(${color})`,
