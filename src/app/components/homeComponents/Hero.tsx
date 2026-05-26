@@ -53,7 +53,8 @@ const Hero = () => {
 
       <div className="bg-(--white) md:grid gap-[100] grid-rows-3 overflow-hidden hidden">
         <Image
-          loading="eager"
+          // loading="eager"
+          priority
           src={`/assets/svg/Title_svg.svg`}
           width={900}
           height={224}
@@ -222,7 +223,8 @@ const Herocard = ({
 
       <Image
         key={pack}
-        loading="eager"
+        // loading="eager"
+        priority
         src={`/assets/images/home/${pack}-pack.png`}
         width={600}
         height={224}
