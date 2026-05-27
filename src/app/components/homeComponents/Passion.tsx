@@ -9,7 +9,7 @@ const Passion = ({ page }: { page: string }) => {
   const ref = useScrollReveal();
   return (
     <div className="md:grid md:grid-cols-[1fr_minmax(0,1600px)_1fr] [&>*]:col-2">
-      <div className="flex flex-col md:grid md:grid-cols-[2fr_3fr]">
+      <div className="flex flex-col md:grid md:grid-cols-[2fr_3fr] md:gap-[8]">
         <div className="flex flex-col md:order-2">
           <div className="order-2 md:order-0 md:mx-auto">
             <TextBox tagheader="Passion" header="Hey Yum! Only the good">

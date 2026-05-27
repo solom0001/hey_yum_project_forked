@@ -1,18 +1,9 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import TextBox from "../utilityComponents/TextBox";
 import HeaderOneComp from "../utilityComponents/HeaderOneComp";
 import Image from "next/image";
-
-// const containerVariants = {
-//   hidden: {},
-//   visible: {
-//     transition: { staggerChildren: 0.15 },
-//   },
-// };
-
 const itemVariants = {
   hidden: { opacity: 0, x: -60 },
   visible: {
@@ -23,9 +14,6 @@ const itemVariants = {
 };
 
 const QualitySec = () => {
-  // const ref = useRef(null);
-  // const isInView = useInView(ref, { once: true, amount: 0.1 });
-
   return (
     <section className="S_Content_width">
       <motion.div
@@ -84,7 +72,7 @@ const QualitySec = () => {
               belive organic is better for the planet and better for people.
               Including people with a sweet tooth
             </p>
-            <ul className="[&>*]:mt-4 list-disc px-4">
+            <ul className="*:mt-4 list-disc px-4">
               <li>
                 <p>
                   Organic Foods are grown without the use of synthetic
