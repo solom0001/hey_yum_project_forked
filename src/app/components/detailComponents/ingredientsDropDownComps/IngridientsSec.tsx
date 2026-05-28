@@ -34,14 +34,14 @@ export default function IngredientsSec({ productDetails }: Props) {
         <div className="grid gap-2">
           {productDetails.product_nutrition.map((item, index) => (
             <div key={index}>
-              <p>Energy (kj): {item.energy_kj}</p>
-              <p>Fat: {item.fat}</p>
-              <p>Carbohydrates: {item.carbohydrates}</p>
-              <p>Protein: {item.protein}</p>
-              <p>Saturates: {item.saturates}</p>
-              <p>Sugars: {item.sugars}</p>
-              <p>Salt: {item.salt}</p>
-              <p>Per amount: {item.per_amount}</p>
+              <p>Energy: {item.energy_kj}kcal</p>
+              <p>Fat: {item.fat}g</p>
+              <p>Carbohydrates: {item.carbohydrates}g</p>
+              <p>Protein: {item.protein}g</p>
+              <p>Saturates: {item.saturates}g</p>
+              <p>Sugars: {item.sugars}g</p>
+              <p>Salt: {item.salt}g</p>
+              <p>Per amount: {item.per_amount}g</p>
             </div>
           ))}
         </div>
