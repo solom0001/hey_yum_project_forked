@@ -7,43 +7,17 @@ import Image from "next/image";
 const Hero = () => {
   const [active, setActive] = useState<keyof typeof variants>("orange");
 
-  const variants = {
-    orange: {
-      bgColor: "--orange",
-      color: "--light_green",
-      pack: "--orange",
-      name: "TRIASSIC GARDEN!",
-      link: "detail/40853efb-2d70-4653-9a3d-b476ada5bb0e?id=40853efb-2d70-4653-9a3d-b476ada5bb0e",
-    },
-    green: {
-      bgColor: "--green",
-      color: "--magenta",
-      pack: "--green",
-      name: "MAGIC GARDEN!",
-      link: "detail/e74da739-c0b6-49da-9abf-a7f074603dc5?id=e74da739-c0b6-49da-9abf-a7f074603dc5",
-    },
-    yellow: {
-      bgColor: "--blue",
-      color: "--yellow",
-      pack: "--yellow",
-      name: "SOUR FLOWER!",
-      link: "detail/11a63138-f2e0-438a-9590-c49a8451b5d4?id=11a63138-f2e0-438a-9590-c49a8451b5d4",
-    },
-    blue: {
-      bgColor: "--yellow",
-      color: "--orange",
-      pack: "--blue",
-      name: "LOVE SPRING!",
-      link: "detail/868a226f-53e4-4fb3-93d1-20bb39fbd31e?id=868a226f-53e4-4fb3-93d1-20bb39fbd31e",
-    },
-  } as const;
-
   const current = variants[active];
 
   return (
     <div className="fullbleed grid md:grid-cols-[2fr_3fr] h-screen ">
       <div className="">
-        <Herocard {...current} text="See now" active={active} setActive={setActive} />
+        <Herocard
+          {...current}
+          text="See now"
+          active={active}
+          setActive={setActive}
+        />
       </div>
 
       <div className="bg-(--white) md:grid gap-[100] grid-rows-3 overflow-hidden hidden">
@@ -71,7 +45,9 @@ const Hero = () => {
               &#60;
             </h2>
 
-            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">MAGIC FOREST!</h2>
+            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+              MAGIC FOREST!
+            </h2>
           </div>
           <div
             onClick={() => setActive("orange")}
@@ -87,7 +63,9 @@ const Hero = () => {
               &#60;
             </h2>
 
-            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">TRIASSIC GARDEN!</h2>
+            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+              TRIASSIC GARDEN!
+            </h2>
           </div>
           <div
             onClick={() => setActive("yellow")}
@@ -102,7 +80,9 @@ const Hero = () => {
             >
               &#60;
             </h2>
-            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">SOUR FLOWER!</h2>
+            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+              SOUR FLOWER!
+            </h2>
           </div>
           <div
             onClick={() => setActive("blue")}
@@ -117,7 +97,9 @@ const Hero = () => {
             >
               &#60;
             </h2>
-            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">LOVER SPRING!</h2>
+            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+              LOVER SPRING!
+            </h2>
           </div>
         </div>
       </div>
@@ -158,7 +140,13 @@ const variants = {
   },
 } as const;
 
-type Colors = "--orange" | "--yellow" | "--green" | "--blue" | "--light_green" | "--magenta";
+type Colors =
+  | "--orange"
+  | "--yellow"
+  | "--green"
+  | "--blue"
+  | "--light_green"
+  | "--magenta";
 
 type CardProps = {
   name: string;
@@ -171,7 +159,16 @@ type CardProps = {
   setActive: React.Dispatch<React.SetStateAction<keyof typeof variants>>;
 };
 
-const Herocard = ({ name, text, link, color, bgColor, pack, active, setActive }: CardProps) => {
+const Herocard = ({
+  name,
+  text,
+  link,
+  color,
+  bgColor,
+  pack,
+  active,
+  setActive,
+}: CardProps) => {
   return (
     <div
       style={{
@@ -180,7 +177,11 @@ const Herocard = ({ name, text, link, color, bgColor, pack, active, setActive }:
       className="grid md:grid-rows-1 grid-rows-[50%_50%]  w-full h-full overflow-hidden shadow-[inset_-20px_0_70px_-30px_var(--black)]"
     >
       <div className="grid col-1 row-1 pt-8">
-        <h1 key={name} style={{ color: `var(${color})` }} className="title_text text-center mx-auto max-w-[600] leading-tight font-lilita animate-fade-in">
+        <h1
+          key={name}
+          style={{ color: `var(${color})` }}
+          className="title_text text-center mx-auto max-w-[600] leading-tight font-lilita animate-fade-in"
+        >
           {name}
         </h1>
 
@@ -214,7 +215,9 @@ const Herocard = ({ name, text, link, color, bgColor, pack, active, setActive }:
             &#60;
           </h2>
 
-          <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">MAGIC FOREST!</h2>
+          <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+            MAGIC FOREST!
+          </h2>
         </div>
         <div
           onClick={() => setActive("orange")}
@@ -230,7 +233,9 @@ const Herocard = ({ name, text, link, color, bgColor, pack, active, setActive }:
             &#60;
           </h2>
 
-          <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">TRIASSIC GARDEN!</h2>
+          <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+            TRIASSIC GARDEN!
+          </h2>
         </div>
         <div
           onClick={() => setActive("yellow")}
@@ -245,7 +250,9 @@ const Herocard = ({ name, text, link, color, bgColor, pack, active, setActive }:
           >
             &#60;
           </h2>
-          <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">SOUR FLOWER!</h2>
+          <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+            SOUR FLOWER!
+          </h2>
         </div>
         <div
           onClick={() => setActive("blue")}
@@ -260,7 +267,9 @@ const Herocard = ({ name, text, link, color, bgColor, pack, active, setActive }:
           >
             &#60;
           </h2>
-          <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">LOVER SPRING!</h2>
+          <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+            LOVER SPRING!
+          </h2>
         </div>
       </div>
     </div>
