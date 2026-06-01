@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Basket from "./Basket";
 import BasketItems from "./BasketItems";
 
-type Page = "home" | "products" | "aboutUs" | "contact" | "";
+type Page = "home" | "production" | "products" | "aboutUs" | "contact" | "";
 
 type Props = {
   page: Page;
@@ -20,14 +20,7 @@ const Nav = ({ page }: Props) => {
     <div className="grid sticky top-0 left bg-(--white) z-100 border-b-3 border-t-3 border-(--black) w-full ContentWitdh">
       <nav className="flex justify-between h-[60] *:my-auto">
         <Link href={"/"}>
-          <Image
-            loading="eager"
-            src="/assets/images/home/Logo.svg"
-            alt="image"
-            width={100}
-            height={100}
-            className="object-center w-[120] h-auto object-cover hover:scale-110 transition-all duration-100 ease-in"
-          />
+          <Image loading="eager" src="/assets/images/home/Logo.svg" alt="image" width={100} height={100} className="object-center w-[120] h-auto object-cover hover:scale-110 transition-all duration-100 ease-in" />
         </Link>
         <div className="w-fit hidden md:flex h-full  gap-6 justify-between items-center">
           <Link href={"/productList"}>
@@ -37,9 +30,16 @@ const Nav = ({ page }: Props) => {
             >
               Products
             </p>
-            {page === "products" && (
-              <div className="h-0.5 w-full bg-(--black)"></div>
-            )}
+            {page === "products" && <div className="h-0.5 w-full bg-(--black)"></div>}
+          </Link>
+          <Link href={"/production"}>
+            <p
+              className={` hover:scale-110 transition-all duration-100 ease-in
+            ${page === "production" && "font-bold! "} `}
+            >
+              Production
+            </p>
+            {page === "production" && <div className="h-0.5 w-full bg-(--black)"></div>}
           </Link>
           <Link href={"/aboutUs"} className="flex flex-col">
             <p
@@ -48,9 +48,7 @@ const Nav = ({ page }: Props) => {
             >
               About us
             </p>
-            {page === "aboutUs" && (
-              <div className="h-0.5 w-full bg-(--black)"></div>
-            )}
+            {page === "aboutUs" && <div className="h-0.5 w-full bg-(--black)"></div>}
           </Link>
           <Link href={"/contact"} className="flex flex-col">
             <p
@@ -59,32 +57,19 @@ const Nav = ({ page }: Props) => {
             >
               Contact
             </p>
-            {page === "contact" && (
-              <div className="h-0.5 w-full bg-(--black)"></div>
-            )}
+            {page === "contact" && <div className="h-0.5 w-full bg-(--black)"></div>}
           </Link>
         </div>
 
         <div className=" flex flex-nowrap gap-8 h-full w-auto items-center">
           <Basket openBasket={openBasket} setOpenBasket={setOpenBasket} />
 
-          <div
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex relative z-0 md:hidden h-full w-fit flex-col gap-2 justify-center transition-all duration-300 ease-in-out "
-          >
-            <span
-              className={`block w-8 h-[2] rounded-2xl bg-(--black) transition-all duration-300  ${isOpen ? "translate-y-[10px] rotate-45" : ""}`}
-            ></span>
-            <span
-              className={` w-8 h-[2] rounded-2xl bg-(--black) transition-all duration-300  ${isOpen ? "opacity-0" : "opacity-100"}`}
-            ></span>
-            <span
-              className={`block w-8 h-[2] rounded-2xl bg-(--black) transition-all duration-300  ${isOpen ? "-translate-y-[10px] -rotate-45" : ""}`}
-            ></span>
+          <div onClick={() => setIsOpen(!isOpen)} className="flex relative z-0 md:hidden h-full w-fit flex-col gap-2 justify-center transition-all duration-300 ease-in-out ">
+            <span className={`block w-8 h-[2] rounded-2xl bg-(--black) transition-all duration-300  ${isOpen ? "translate-y-[10px] rotate-45" : ""}`}></span>
+            <span className={` w-8 h-[2] rounded-2xl bg-(--black) transition-all duration-300  ${isOpen ? "opacity-0" : "opacity-100"}`}></span>
+            <span className={`block w-8 h-[2] rounded-2xl bg-(--black) transition-all duration-300  ${isOpen ? "-translate-y-[10px] -rotate-45" : ""}`}></span>
 
-            <div
-              className={`absolute flex flex-col gap-8 *:max-h-[35] z-10 top-full right-0  h-[40vh]  w-[40vw] p-4 bg-(--black) text-(--white)! transition-all duration-300  ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
-            >
+            <div className={`absolute flex flex-col gap-8 *:max-h-[35] z-10 top-full right-0  h-[40vh]  w-[40vw] p-4 bg-(--black) text-(--white)! transition-all duration-300  ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
               <Link href={"/productList"}>
                 <p
                   className={`  py-2 border-b-2 active:scale-[1.05] active:font-bold! transition-scale
