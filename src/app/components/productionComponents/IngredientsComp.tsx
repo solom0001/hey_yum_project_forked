@@ -38,8 +38,8 @@ type IngredientFeatureProps = {
 
 const IngredientFeature = ({ title, text }: IngredientFeatureProps) => (
   <div className="text-center">
-    <h2 className="text-[27px]! mb-2">{title}</h2>
-    <p className="max-w-[30ch] mx-auto">{text}</p>
+    <h2 className="text-[27px]! mb-2 font-heyyum">{title}</h2>
+    <p className="max-w-[30ch] mx-auto ">{text}</p>
   </div>
 );
 
