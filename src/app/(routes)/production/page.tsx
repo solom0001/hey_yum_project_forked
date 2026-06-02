@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <div className="grid gap-12">
       <Nav page="production" />
-      <ProdIntroSec />
+      <ProdIntroSec header="Yummilicious Organic Candy" text="All Hey Yum! sweets are certified ORGANIC. It’s something we’re passionate about. We believe ORGANIC is best for the planet and best for people. Including people with a sweet tooth. All our sweets carry the EU organic logo. They are made from all natural and organic ingredients and without any artificial flavour or colour. All basic ingredients come from controlled organic farms." src="upclose_candyShot.png" />
       <div className="air w-full md:h-[70] h-[30]"></div>
 
       <ProductionProcess />
@@ -18,6 +18,7 @@ export default function Contact() {
       <IngredientsComp />
       <div className="air w-full md:h-[70] h-[30]"></div>
 
+      <ProdIntroSec header="Recyclable Packaging" text="The foil we use for HEY YUM! is type (pp). It is suitable for recycling and comply with EU food regulations. Please make sure to recycle the empty foil bag by placing it the waste containers for recyclable soft plast. In that way together we can reduce the consumption of non-renewable raw materials." src="packshot_all_bundle.png" />
       <DetailedCards text="Detail for out products" />
       <div className="air w-full md:h-[70] h-[30]"></div>
     </div>
