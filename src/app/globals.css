@@ -19,7 +19,7 @@
 
 @theme inline {
   --font-lilita: var(--font-lilita-one);
-  --font-heyyum: var(--font-heyyum);
+  --font-heyyum: var(--font-heyyum-local);
 }
 
 body {

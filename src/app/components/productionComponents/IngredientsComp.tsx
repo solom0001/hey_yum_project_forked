@@ -71,16 +71,16 @@ const IngredientsComp = () => {
         </div>
 
         <Image
-          src="/assets/images/production/Ingredients_img.webp"
+          src="/assets/images/production/Ingredients_img.png"
           alt="Ingredients image"
-          width={600}
-          height={600}
+          width={1000}
+          height={800}
           loading="lazy"
           className="
             mx-auto
             w-full
             h-auto
-            md:max-w-[550px]
+            md:max-w-[700px]
             [mask-image:linear-gradient(to_bottom,black_94%,transparent_100%)]
             [-webkit-mask-image:linear-gradient(to_bottom,black_94%,transparent_100%)]
           "
