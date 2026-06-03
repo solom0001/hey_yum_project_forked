@@ -4,6 +4,7 @@ import Benefits from "./BenefitsComponent";
 import Image from "next/image";
 import useScrollReveal from "@/app/hooks/useScrollReveal";
 import HeaderOneComp from "../utilityComponents/HeaderOneComp";
+import LinkButton from "../utilityComponents/LinkButton";
 
 const FunctionSection = () => {
   const ref = useScrollReveal();
@@ -17,11 +18,18 @@ const FunctionSection = () => {
             <div className="md:px-0 px-4">
               <HeaderOneComp text="TASTY BY NATURE" />
             </div>
-            <p className="max-w-[600] leading-[130%] text-[clamp(1.375rem,1.1193rem+1.1364vw,2rem)]! px-4 md:px-0">
+            <p className="max-w-[600] leading-[130%] text-[clamp(1.375rem,1.1193rem+1.1364vw,2rem)]! px-4 md:px-0 mb-8">
               Tasty, organic and cruelty free certified Candy to respect the
               environment and nature, obtained with energy produced from sources
               renewable
             </p>
+            <div className="px-4 md:px-0">
+              <LinkButton
+                color="--black"
+                link={`production`}
+                text="Read more"
+              />
+            </div>
           </span>
         </div>
 

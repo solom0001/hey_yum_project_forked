@@ -12,7 +12,7 @@ export const heyYumFont = localFont({
       style: "normal",
     },
   ],
-  variable: "--font-heyyum",
+  variable: "--font-heyyum-local",
 });
 
 const plusJakarta = Plus_Jakarta_Sans({

@@ -45,13 +45,16 @@ export default async function ProductsPage({ params }: Props) {
 
   console.log("id =", id);
 
-  const response = await fetch(`https://towbvljdqlfyzhysgbtd.supabase.co/rest/v1/products?select=*,product_tags(tags(*)),product_ingredients(ingredients(name)),product_nutrition(*)&id=eq.${id}`, {
-    headers: {
-      apikey: `sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP`,
-      Authorization: `Bearer sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP`,
-      "Content-Type": "application/json",
+  const response = await fetch(
+    `https://towbvljdqlfyzhysgbtd.supabase.co/rest/v1/products?select=*,product_tags(tags(*)),product_ingredients(ingredients(name)),product_nutrition(*)&id=eq.${id}`,
+    {
+      headers: {
+        apikey: `sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP`,
+        Authorization: `Bearer sb_publishable_hQLCA1gMNkb9AcWu9-IHcA_WylH6nPP`,
+        "Content-Type": "application/json",
+      },
     },
-  });
+  );
 
   console.log(response.status);
 
@@ -61,7 +64,7 @@ export default async function ProductsPage({ params }: Props) {
 
   return (
     <div className="grid ">
-      <Nav page="products" />
+      <Nav page="shop" />
 
       <div className="ContentWitdh ">
         <div className="grid gap-[20] md:grid-cols-[2fr_3fr] relative col-span-full! md:col-2! ">

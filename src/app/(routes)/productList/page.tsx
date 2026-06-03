@@ -4,7 +4,7 @@ import ProductsComponent from "@/app/components/utilityComponents/Products/Produ
 export default function ProductsPage() {
   return (
     <div className="grid mb-16">
-      <Nav page="products" />
+      <Nav page="shop" />
       <div className=" mt-(--mt_std)">
         <ProductsComponent text="Our product" />
       </div>
