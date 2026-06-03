@@ -1,5 +1,6 @@
 "use client";
 
+import AnimatedBtn from "../utilityComponents/AnimatedBtn";
 import LinkButton from "../utilityComponents/LinkButton";
 import TextBox from "../utilityComponents/TextBox";
 import Image from "next/image";
@@ -36,9 +37,8 @@ const Passion = ({ page }: { page: string }) => {
                     welcome.
                   </p>
                   {page === "home" && (
-                    <LinkButton
+                    <AnimatedBtn
                       aria-label="Read more about HeyYum"
-                      color="--black"
                       link="aboutUs"
                       text="Read more"
                     />

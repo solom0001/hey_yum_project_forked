@@ -78,6 +78,14 @@ const Nav = ({ page }: Props) => {
                   Products
                 </p>
               </Link>
+              <Link href={"/production"}>
+                <p
+                  className={`  py-2 border-b-2 active:scale-[1.05] active:font-bold! transition-scale
+            ${page === "production" && "font-semibold"} `}
+                >
+                  Production
+                </p>
+              </Link>
               <Link href={"/aboutUs"}>
                 <p
                   className={`  py-2 border-b-2 active:scale-[1.05] active:font-bold! transition-scale
