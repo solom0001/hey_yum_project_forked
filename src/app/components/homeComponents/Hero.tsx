@@ -45,7 +45,7 @@ const Hero = () => {
               &#60;
             </h2>
 
-            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-heyyum">
               MAGIC FOREST!
             </h2>
           </div>
@@ -63,7 +63,7 @@ const Hero = () => {
               &#60;
             </h2>
 
-            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-heyyum">
               TRIASSIC GARDEN!
             </h2>
           </div>
@@ -80,7 +80,7 @@ const Hero = () => {
             >
               &#60;
             </h2>
-            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-heyyum">
               SOUR FLOWER!
             </h2>
           </div>
@@ -97,7 +97,7 @@ const Hero = () => {
             >
               &#60;
             </h2>
-            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-lilita">
+            <h2 className="text-[clamp(1.5rem,1.05rem+1.2vw,2.25rem)]! text-(--white) font-heyyum">
               LOVER SPRING!
             </h2>
           </div>

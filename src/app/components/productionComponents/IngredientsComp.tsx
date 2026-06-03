@@ -47,7 +47,7 @@ const IngredientsComp = () => {
   return (
     <section className="grid">
       <div className="*:mx-auto md:mb-12">
-        <HeaderOneComp text="The Ingredients in Hey Yum!" />
+        <HeaderOneComp text="The Flavors of Hey Yum!" />
       </div>
 
       <div
