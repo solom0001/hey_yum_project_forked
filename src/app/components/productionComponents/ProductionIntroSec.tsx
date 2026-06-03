@@ -5,17 +5,18 @@ type Props = {
   text: string;
   header: string;
   src: string;
+  reverse?:Boolean;
 };
 
-const ProdIntroSec = ({ text, header, src }: Props) => {
+const ProdIntroSec = ({ text, header, src,reverse }: Props) => {
   return (
     <div className="S_Content_width">
-      <div className="w-full flex flex-col md:grid grid-cols-2 gap-4 md:p-4">
-        <TextBox header={header}>
+      <div className={`w-full flex flex-col md:grid grid-cols-2 gap-4 md:p-4`}>
+        <TextBox header={header} className={reverse ? "md:order-2" : ""}>
           <p>{text}</p>
         </TextBox>
 
-        <div className="relative h-[150] md:aspect-auto w-full md:h-auto overflow-hidden">
+        <div className={`relative h-[150px] md:h-auto overflow-hidden ${reverse ? "md:order-1" : ""}`}>
           <Image loading="eager" src={`/assets/images/production/${src}`} alt="image" fill className="object-center object-cover" />
         </div>
       </div>

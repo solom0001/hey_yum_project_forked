@@ -3,6 +3,7 @@
 import Image from "next/image";
 import LinkButton from "../utilityComponents/LinkButton";
 import IngredientsSec from "../detailComponents/ingredientsDropDownComps/IngridientsSec";
+import AnimatedBtn from "../utilityComponents/AnimatedBtn";
 
 type ProductResponse = {
   id: string;
@@ -45,24 +46,13 @@ const ProductionDetails = ({ productDetails }: Props) => {
     <div className="max-w-[650] h-full flex flex-col px-4 ">
       <div className="flex">
         <h2 className="mb-2.5">{productDetails.name}</h2>
-        <Image
-          loading="lazy"
-          src={`/assets/images/details/eu-organic-logo-600x400_0-300x200 2.png`}
-          width={300}
-          height={150}
-          alt={"eu-organic-logo"}
-          className=" h-[45] w-[63] rounded-(--std_rounded) ml-auto"
-        />
+        <Image loading="lazy" src={`/assets/images/details/eu-organic-logo-600x400_0-300x200 2.png`} width={300} height={150} alt={"eu-organic-logo"} className=" h-[45] w-[63] rounded-(--std_rounded) ml-auto" />
       </div>
       <p>{productDetails.description}</p>
       <div className="mt-8 flex gap-[20]">
         {productDetails.product_tags.map((tag, index) => (
           <div key={tag.tags.name} className="flex flex-col">
-            <img
-              src={tag.tags.tag_icons}
-              alt={tag.tags.name}
-              className="object-cover md:h-[70] h-[45] w-[45] md:w-[70] mx-auto"
-            />
+            <img src={tag.tags.tag_icons} alt={tag.tags.name} className="object-cover md:h-[70] h-[45] w-[45] md:w-[70] mx-auto" />
             <span className="text-center font-semibold!" key={tag.tags.name}>
               {tag.tags.name}
             </span>
@@ -70,11 +60,7 @@ const ProductionDetails = ({ productDetails }: Props) => {
         ))}
       </div>
       <div className="[&>*>*]:w-full mt-8 mb-8 cursor-pointer">
-        <LinkButton
-          color="--black"
-          link={`detail/${productDetails.id}?id=${productDetails.id}`}
-          text="See now"
-        />
+        <AnimatedBtn link={`detail/${productDetails.id}?id=${productDetails.id}`} text="See now" />
       </div>
       <IngredientsSec productDetails={productDetails} />
     </div>
