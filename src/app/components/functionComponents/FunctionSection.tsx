@@ -5,6 +5,7 @@ import Image from "next/image";
 import useScrollReveal from "@/app/hooks/useScrollReveal";
 import HeaderOneComp from "../utilityComponents/HeaderOneComp";
 import LinkButton from "../utilityComponents/LinkButton";
+import AnimatedBtn from "../utilityComponents/AnimatedBtn";
 
 const FunctionSection = () => {
   const ref = useScrollReveal();
@@ -24,11 +25,7 @@ const FunctionSection = () => {
               renewable
             </p>
             <div className="px-4 md:px-0">
-              <LinkButton
-                color="--black"
-                link={`production`}
-                text="Read more"
-              />
+              <AnimatedBtn link={`production`} text="Read more" />
             </div>
           </span>
         </div>
